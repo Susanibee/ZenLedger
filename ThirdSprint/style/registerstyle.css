@@ -1,0 +1,231 @@
+body {
+  background-color: #d9e8da;
+  margin: 0;
+  padding: 0;
+}
+
+.helper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  z-index: -1;
+}
+
+.background-logo {
+  width: 85%;
+  height: 85%;
+  opacity: 50%;
+}
+
+@font-face {
+  font-family: "windsongregular";
+  src: url("/fonts/Windsong-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "garogierregular";
+  src: url("/fonts/Garogier.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.headshot {
+width: 40px;
+}
+
+.top-buttons {
+  position: absolute;
+  align-items: flex-end;
+
+  right: 10px;
+  top: 0;
+  padding: 10px;
+  gap: 20px;
+}
+
+.zenlogo-picture {
+  height: auto;
+  width: auto;
+  max-width: 400px;
+  margin-top: -27px;
+  position: absolute;
+  align-items: flex-start;
+}
+
+.top-bar {
+  width: 90%;
+  height: 45px;
+
+  margin: auto;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  padding: 10px;
+  position: relative;
+  display: flex;
+}
+
+.nav-button-support {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-right: 25px;
+}
+
+.nav-button-about {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-right: 55px;
+}
+
+.sign-in-button {
+  align-items: flex-end;
+
+  font-family: "garogierregular";
+
+  background-color: #7fb285;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 25px;
+
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.sign-out-button {
+  margin-top: 6px;
+  align-items: flex-end;
+
+  font-family: "garogierregular";
+
+  background-color: #7fb285;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 15px;
+
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.sign-up-button {
+  font-family: "garogierregular";
+  background-color: #7fb285;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 25px;
+
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+  margin-left: 200px;
+  z-index: -1;
+}
+
+.stickleaf {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.table {
+  display: grid;
+
+  margin-top: 120px;
+
+  grid-template-columns: 450px 200px;
+  grid-template-rows: 350px 200px;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tagline1 {
+  font-family: "garogierregular";
+
+  font-size: 50px;
+  margin-top: 50px;
+}
+.tagline2 {
+  font-family: "garogierregular";
+
+  font-size: 25px;
+}
+
+.front-space {
+  line-height: 103px;
+}
+
+.name-left {
+  font-family: "garogierregular";
+  top: 0;
+  left: 0;
+}
+
+.employee-picture {
+  margin-left: auto;
+}
+
+.chart-button {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-left: 500px;
+}
+.ledger-button {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-left: 30px;
+}
+.placeholder-button {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-left: 30px;
+}
+.placeholder2-button {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.calendar-button {
+  font-family: "garogierregular";
+  font-size: 23px;
+  color: black;
+  background: none;
+  border: none;
+  text-decoration: none;
+  margin-left: 30px;
+}
