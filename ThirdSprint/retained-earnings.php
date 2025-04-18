@@ -39,7 +39,7 @@ include("snippets/cosmic-message.php");
               </div>
 
 <?php
-    $conn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
+    $conn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
 
     $result = pg_query($conn, "
         SELECT account_subcategory, SUM(debit) as total_debit, SUM(credit) as total_credit 

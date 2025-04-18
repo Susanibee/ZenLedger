@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['customer_name']) && !em
 
 
 <?php
-$conn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
+$conn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
 
 if (!$conn) {
     die("Connection failed: " . pg_last_error());

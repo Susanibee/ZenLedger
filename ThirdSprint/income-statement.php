@@ -51,7 +51,7 @@ include("snippets/cosmic-message.php");
               </div>
 
     <?php
-    $conn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
+    $conn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
 
 
     $accounts_result = pg_query($conn, "SELECT DISTINCT account_name FROM chart_of_accounts ORDER BY account_name ASC");

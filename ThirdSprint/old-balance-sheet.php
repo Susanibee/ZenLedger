@@ -51,7 +51,7 @@ if (isset($_SESSION["username"])) {
         <hr>
 
 <?php
-    $conn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
+    $conn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require");
 
     if (!$conn) {
         die("<p>Connection failed: " . pg_last_error() . "</p>");

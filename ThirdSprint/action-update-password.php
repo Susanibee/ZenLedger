@@ -5,7 +5,7 @@ $email = pg_escape_string($_POST['email']);
 $password = pg_escape_string($_POST['password']);
 $hashedpass = password_hash($password, PASSWORD_DEFAULT);
 
-$dbconn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
+$dbconn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
 or die('Could not connect: ' . pg_last_error());
 
 $query = "select employee_password, employee_old_passwords from employee_personal_information where employee_last_name = '".$last."' AND employee_zip_code = ".$zip." AND employee_email_address = '".$email."'";

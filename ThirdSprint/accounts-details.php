@@ -31,7 +31,7 @@ include("snippets/cosmic-message.php");
 </div>
         <hr>
         <?php
-        $dbconn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
+        $dbconn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
             or die('Could not connect: ' . pg_last_error());
         $number = $_GET['number'];
         $query = "SELECT * FROM chart_of_accounts WHERE account_id = $1";

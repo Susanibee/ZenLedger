@@ -13,7 +13,7 @@ $hashedpass = password_hash($password, PASSWORD_DEFAULT);
 
 // create username from scratch
 $username = substr($first, 0, 1) . $last . date("my");
-$dbconn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
+$dbconn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
     or die('Could not connect: ' . pg_last_error());
 
 /* old, working query

@@ -62,7 +62,7 @@ if (isset($_SESSION["admin"])) {
                     </tr>
                     <?php 
                         // Connecting, selecting database
-                        $dbconn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
+                        $dbconn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
                             or die('Could not connect: ' . pg_last_error());
                         
                         

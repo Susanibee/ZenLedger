@@ -52,7 +52,7 @@ include("snippets/cosmic-message.php");
                 const new_select = document.createElement("select");
                 const accounts_names_id = 
                 <?php
-                    $dbconn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
+                    $dbconn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
                     or die('Could not connect: ' . pg_last_error());
 
                     // SQL query to read columns
@@ -125,7 +125,7 @@ include("snippets/cosmic-message.php");
                 const date = document.getElementById("date_of_transaction")
                 const today = new Date();
                 <?php
-                    $dbconn = pg_connect("postgresql://zenteamrole:npg_I7ZNn1hVqjtA@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
+                    $dbconn = pg_connect("postgresql://zenteamrole:${{ secrets.pgpass }}@ep-raspy-smoke-a5pyv0mk-pooler.us-east-2.aws.neon.tech/zenledgerdb?sslmode=require")
                     or die('Could not connect: ' . pg_last_error());
                     $query = "select * from journal_entries where post_reference='$number'";
                     $result = pg_query($dbconn, $query) or die('Query failed: ' . pg_last_error());
